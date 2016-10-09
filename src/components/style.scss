@@ -1,0 +1,78 @@
+// Global
+#root {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 2em;
+}
+
+// Modify Bootstrap
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+    .col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+// Filters
+.monster-filters {
+
+    margin-bottom: 2em;
+
+    .filter-field {
+
+        label {
+            display: block;
+        }
+
+        select {
+            width: 100%;
+        }
+    }
+}
+
+// Listings
+.monster-listings {
+    display: flex;
+    flex-wrap: wrap;
+
+    .alert {
+        margin: 3em 1em 0;
+    }
+}
+
+// Footer
+.footer {
+    border-top: 1px solid #777;
+    margin-top: 1em;
+    margin-bottom: 3em;
+    padding-top: 2em;
+}
