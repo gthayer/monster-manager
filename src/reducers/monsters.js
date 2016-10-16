@@ -51,8 +51,6 @@ function monsters( state = [], action) {
 
 		});
 
-		// TODO: Add no results message.
-
 		// Return Results.
 		return results;
 
