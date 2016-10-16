@@ -27,6 +27,10 @@ export default (req, res) => {
 					<html>
 						<header>
 							<title>Monster Manager</title>
+							<meta name="HandheldFriendly" content="True">
+							<meta name="MobileOptimized" content="320">
+							<meta name="viewport" content="width=device-width, initial-scale=1"/>
+							
 							<!-- Bootstrap -->
 							<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 							<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -49,6 +53,10 @@ export default (req, res) => {
 					<html>
 						<header>
 							<title>Monster Manager</title>
+							<meta name="HandheldFriendly" content="True">
+							<meta name="MobileOptimized" content="320">
+							<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
 							<!-- Bootstrap -->
 							<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 							<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -68,7 +76,7 @@ export default (req, res) => {
 							<link rel='stylesheet' href='/bundle.css'>
 						</header>
 						<body>
-							<div id='app'>${renderToString(
+							<div id='root'>${renderToString(
 								<Provider store={createStore(reducers, defaultState)}> 
 									<RouterContext {...renderProps} />
 								</Provider>
