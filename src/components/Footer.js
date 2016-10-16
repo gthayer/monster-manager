@@ -9,19 +9,15 @@ const Filters = React.createClass({
 			<div className="footer row">
 
 				<div className="bulilt-with col-sm-4">
-					<p><strong>A sortable D&D 5<sup>th</sup> edition monster manual.</strong></p>
+					<p><strong>An interactive Dungeons and Dragons 5e Monster Manual built on React.js.</strong></p>
 				</div>
 
 				<div className="bulilt-with col-sm-4">
-					<p><strong>Built with:</strong></p>
-					<ul>
-						<li><a href="https://facebook.github.io/react/" title="React.js">React.js</a></li>
-						<li><a href="http://getbootstrap.com/" title="Twitter Bootstrap">Twitter Bootstrap</a></li>
-					</ul>
+					<p>Some content used under the <a href="http://www.opengamingfoundation.org/ogl.html" title="Open Gaming License">Open Gaming License.</a></p>
 				</div>
 
 				<div className="repo col-sm-4">
-
+					<p><a href="https://github.com/gthayer/monster-manager" title="Contribute on GitHub">Contribute on GitHub!</a></p>
 				</div>
 
 			</div>
