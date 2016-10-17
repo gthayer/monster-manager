@@ -29,6 +29,7 @@ module.exports = {
 				to: path.resolve(__dirname, 'dist', 'assets')
 			}
 		]),
+		new webpack.DefinePlugin({GA_TRACKING_CODE: JSON.stringify('UA-85070922-1')}),
 		new ExtractTextPlugin('bundle.css')
 	],
 	module: {
