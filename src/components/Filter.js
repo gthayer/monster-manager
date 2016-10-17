@@ -37,7 +37,7 @@ const Filter = React.createClass({
 
 		return (
 			<div className="filter-field col-sm-15">
-				<label for={id}>{label}: </label>
+				<label htmlFor={id}>{label}: </label>
 				<select value={value} name={id} id={id} onChange={ e => this.props.update_filters(this.props.filters, e.target.name, e.target.value) }>
 					<option value="">{label}</option>
 					{this.state.filter.map((option,i) => <option key={i} value={option}>{option}</option>)}
