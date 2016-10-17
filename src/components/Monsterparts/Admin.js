@@ -8,7 +8,7 @@ const Admin = React.createClass({
 
 		return (
 			<div className="monster-admin">
-				<a href="#" className="btn btn-sm btn-primary" onClick={ e => this.props.add_to_encounter(monster) }>Add to Encounter</a>
+				<button href="#" className="btn btn-sm btn-primary" onClick={ e => this.props.add_to_encounter(monster) }>Add to Encounter</button>
 			</div>
 		)
 	}
