@@ -10,7 +10,7 @@ const Listing = React.createClass({
 			<div className="monster-listing col-sm-3">
 				
 				<h2>
-					<Link to={`/view/${monster.name}`}>
+					<Link to={`/listing/${monster.name}`}>
 						{monster.name}
 					</Link>
 				</h2>
