@@ -65,7 +65,7 @@ export default (req, res) => {
 							<link rel='stylesheet' href='/bundle.css'>
 						</header>
 						<body>
-							<div id='root'>${renderToString(
+							<div id='app'>${renderToString(
 								<Provider store={createStore(reducers, defaultState)}> 
 									<RouterContext {...renderProps} />
 								</Provider>
