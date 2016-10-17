@@ -13,11 +13,11 @@ const Filters = React.createClass({
 				</div>
 
 				<div className="bulilt-with col-sm-4">
-					<p>Some content used under the <a href="http://www.opengamingfoundation.org/ogl.html" title="Open Gaming License">Open Gaming License.</a></p>
+					<p>Some content used under the <a href="http://www.opengamingfoundation.org/ogl.html" target="_blank" title="Open Gaming License">Open Gaming License.</a></p>
 				</div>
 
 				<div className="repo col-sm-4">
-					<p><a href="https://github.com/gthayer/monster-manager" title="Contribute on GitHub">Contribute on GitHub!</a></p>
+					<p><a href="https://github.com/gthayer/monster-manager" target="_blank" title="Contribute on GitHub">Contribute on GitHub!</a></p>
 				</div>
 
 			</div>
