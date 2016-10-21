@@ -37,8 +37,11 @@ function monsters( state = [], action) {
 							{ m.challenge_rating <= value ? successes++ : null }
 							break;
 
-						default:
+						case 'search' :
+							{ m.name.toLowerCase().indexOf( value ) != -1 ? successes++ : null }
+							break;
 
+						default:
 							{ m[key] == value ? successes++ : null }
 					}
 				}

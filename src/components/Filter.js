@@ -34,16 +34,25 @@ const Filter = React.createClass({
 	render() {
 
 		const { filter, label, id, value  } = this.props;
-
-		return (
-			<div className="filter-field col-sm-15">
-				<label htmlFor={id}>{label}: </label>
-				<select value={value} name={id} id={id} onChange={ e => this.props.update_filters(this.props.filters, e.target.name, e.target.value) }>
-					<option value="">{label}</option>
-					{this.state.filter.map((option,i) => <option key={i} value={option}>{option}</option>)}
-				</select>
-			</div>
-		)
+ 
+		if ( 'search' === id ) {
+			return (
+				<div className="filter-field col-sm-2">
+					<label htmlFor={id}>{label}: </label>
+					<input type="text" value={value} name={id} id={id} onChange={ e => this.props.update_filters(this.props.filters, e.target.name, e.target.value) } />
+				</div>
+			)
+		} else {
+			return (
+				<div className="filter-field col-sm-2">
+					<label htmlFor={id}>{label}: </label>
+					<select value={value} name={id} id={id} onChange={ e => this.props.update_filters(this.props.filters, e.target.name, e.target.value) }>
+						<option value="">{label}</option>
+						{this.state.filter.map((option,i) => <option key={i} value={option}>{option}</option>)}
+					</select>
+				</div>
+			)
+		}
 	}
 });
 

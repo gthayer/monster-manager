@@ -14,6 +14,7 @@ const Filters = React.createClass({
 				<Filter {...this.props} value={this.props.filters.type} key="type" id="type" filter="type" label="Type"/>
 				<Filter {...this.props} value={this.props.filters.size} key="size" id="size" filter="size" label="Size"/>
 				<Filter {...this.props} value={this.props.filters.alignment} key="alignment" id="alignment" filter="alignment" label="Alignment"/>
+				<Filter {...this.props} value={this.props.filters.search} key="search" id="search" filter="search" label="Search"/>
 
 			</div>
 		)
