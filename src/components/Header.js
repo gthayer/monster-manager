@@ -5,6 +5,8 @@ const Filters = React.createClass({
 
 	render() {
 
+		const { encounter } = this.props;
+
 		return (
 			<div className="header row">
 
@@ -20,7 +22,10 @@ const Filters = React.createClass({
 							<Link to={`/`}>Monster List</Link>
 						</li>
 						<li>
-							<Link to={`/manager`}>View Encounter</Link>
+							<Link to={`/manager`}>View Encounter
+								<img className="encounter-icon" src="/assets/wyvern.svg" />
+								<span>{encounter.length}</span>
+								</Link>
 						</li>
 					</ul>
 				</div>

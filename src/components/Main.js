@@ -9,7 +9,7 @@ const Main = React.createClass({
 		return (
 			<div className="col-sm-12">
 
-				<Header />
+				<Header {...this.props} />
 				
 				{React.cloneElement(this.props.children, this.props)}
 

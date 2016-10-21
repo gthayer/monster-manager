@@ -6,6 +6,15 @@
 
 .header {
     margin-bottom: 2em;
+
+    .nav-tabs>li>a {
+        line-height: 2em;
+    }
+
+    .encounter-icon {
+        width: 25px;
+        margin: 0 5px 0 15px;
+    }
 }
 
 // Modify Bootstrap
@@ -42,6 +51,39 @@
     }
 }
 
+// Admin
+.monster-admin {
+    text-align: right;
+
+    .btn {
+        box-shadow: 0 6px #286090;
+        position: relative;
+        font-size: 1em;
+        border: none;
+
+        &:hover {
+            top: 2px;
+            box-shadow: 0 4px #286090;
+            background-color: #337ab7;
+            border: none;
+        }
+
+        &:active {
+            top: 6px;
+            box-shadow: 0 0 #286090;
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &:focus {
+            background-color: #337ab7;
+            outline: none;
+            border: none;
+        }
+    }
+}
+
 // Filters
 .monster-filters {
 
@@ -53,7 +95,8 @@
             display: block;
         }
 
-        select {
+        select,
+        input {
             width: 100%;
         }
     }
