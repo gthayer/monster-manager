@@ -24,6 +24,9 @@ const Listing = React.createClass({
 				<label htmlFor="speed">Speed:</label>
 				<input name="speed" type="text" defaultValue={monster.speed} onChange={ e => this.props.update_listing(e.target.name, e.target.value, i ) } />
 				
+				<label htmlFor="initiative">Initiative:</label>
+				<input name="initiative" type="text" defaultValue={monster.initiative} onChange={ e => this.props.update_listing(e.target.name, e.target.value, i ) } />
+
 				<label htmlFor="notes">Notes:</label>
 				<textarea name="notes" defaultValue={monster.notes} onChange={ e => this.props.update_listing( e.target.name, e.target.value, i ) } />
 
