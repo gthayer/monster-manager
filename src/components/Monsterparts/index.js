@@ -23,12 +23,12 @@ const Monster = React.createClass({
 		return (
 			<div className="monster-single row">
 
-			    <Helmet
-                    title={ monster.name + ' - Monster Manager Listing' }
-                    meta={[
-                    	{name: "description", content: monster.size + ' ' + monster.type + ' - ' + monster.alignment + '. Armor Class: ' + monster.armor_class + '. Hit Points: ' + monster.hit_points + ' (' + monster.hit_dice + '). Speed: ' + monster.speed + ' ' + monster.actions[0].desc },
-                        {property: 'og:title', content: monster.name + ' - Monster Manager Listing'},
-                    ]} />
+				<Helmet
+					title={ monster.name + ' - Monster Manager Listing' }
+					meta={[
+						{name: "description", content: monster.size + ' ' + monster.type + ' - ' + monster.alignment + '. Armor Class: ' + monster.armor_class + '. Hit Points: ' + monster.hit_points + ' (' + monster.hit_dice + '). Speed: ' + monster.speed + ' ' + monster.actions[0].desc },
+						{property: 'og:title', content: monster.name + ' - Monster Manager Listing'},
+					]} />
 
 				<div className="col-sm-3 col-sm-push-9">
 					<Admin {...this.props} i={i} monster={monster} />
