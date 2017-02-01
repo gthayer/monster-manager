@@ -10,6 +10,10 @@ const Filters = React.createClass({
 		return (
 			<div className="header row">
 
+				<div className="col-xs-12 hidden-xs">
+					<div id="pw_adbox_79779_5_0" className="project-wonderful"></div>
+				</div>
+
 				<div className="col-sm-6">
 					<h1>
 						<Link to={`/`}>Monster Manager</Link>
