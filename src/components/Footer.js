@@ -20,7 +20,7 @@ const Filters = React.createClass({
 					<p><a href="https://github.com/gthayer/monster-manager" target="_blank" title="Contribute on GitHub">Contribute on GitHub!</a></p>
 				</div>
 
-				<div className="col-xs-12 hidden-xs project-wonderful">
+				<div className="col-xs-12 hidden-xs">
 					<div id="pw_adbox_79779_5_1" className="project-wonderful"></div>
 				</div>
 
