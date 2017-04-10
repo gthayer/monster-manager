@@ -36,7 +36,7 @@ export default (req, res) => {
 				<html}>
 					<head>
 						<meta charset="utf-8" />
-						<title>${head.title.toString()}</title>
+						${head.title.toString()}
 						${head.meta.toString()}
 
 						<meta name="HandheldFriendly" content="True">
