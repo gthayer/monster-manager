@@ -54,14 +54,51 @@ function monsters( state = [], action) {
 
 		});
 
-		// Return Results.
-		return results;
+			// Return Results.
+			return results;
+
+		case 'ROLL_ATTACK' :
+
+			const { attack_bonus, damage_dice, damage_bonus } = {...action}
+			const damageRoll = damage_dice.split("d");
+
+			// console.log( 'Attack Roll' );
+			rollDice( 1, 20, attack_bonus );
+
+			console.log( 'Damage' );
+			rollDice( damageRoll[0], damageRoll[1], damage_bonus );
+			return state;
 
 		default:
 			return state;
 	}
 
 	return state;
+}
+
+function rollDice( qty = 1, sides = 6, mod = 0, crit = false, verbose = true ) {
+
+	let rolls = [];
+
+	if ( crit ) {
+		qty = qty * 2;
+	}
+
+	for ( let index = 0; index < qty; index++ ) {
+		rolls.push( Math.ceil( Math.random() * sides ) );
+	}
+
+	const total = mod + rolls.reduce(function(a, b){
+		return a + b;
+	}, 0);
+
+	const results = rolls.join();
+
+	if ( verbose ) {
+		console.log( `Rolled: ${qty}d${sides}+${mod}` );
+		console.log( `Results: ${ rolls.join()} +${mod}` );
+		console.log( `Total: ${total}` );
+	}
 }
 
 export default monsters;

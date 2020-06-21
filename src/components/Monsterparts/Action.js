@@ -5,6 +5,8 @@ const Action = React.createClass({
 
 		const action = this.props.action;
 
+		console.log( this.props );
+
 		return (
 			<div className="monster-action">
 
@@ -18,6 +20,12 @@ const Action = React.createClass({
 					{ action.attack_bonus 	? <span className="action-item">Attack Bonus: {action.attack_bonus}</span> 	: null }
 					{ action.damage_dice 	? <span className="action-item">Damage Dice: {action.damage_dice}</span> 	: null }
 					{ action.damage_bonus 	? <span className="action-item">Damage Bonus: {action.damage_bonus}</span> 	: null }
+				
+					<div className="action-attack">
+						<button onClick={ e => this.props.roll_attack( action.attack_bonus, action.damage_dice, action.damage_bonus ) }>Roll:</button>
+						<div className="result"></div>
+					</div>
+
 				</div>
 			
 			</div>

@@ -31,3 +31,12 @@ export function remove_listing(i) {
 		i
 	}
 }
+
+export function roll_attack( attack_bonus, damage_dice, damage_bonus ) {
+	return {
+		type: 'ROLL_ATTACK',
+		attack_bonus,
+		damage_dice,
+		damage_bonus
+	}
+}
