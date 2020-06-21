@@ -61,12 +61,19 @@ function monsters( state = [], action) {
 
 			const { attack_bonus, damage_dice, damage_bonus } = {...action}
 			const damageRoll = damage_dice.split("d");
+			let crit = false;
 
-			// console.log( 'Attack Roll' );
-			rollDice( 1, 20, attack_bonus );
-
-			console.log( 'Damage' );
-			rollDice( damageRoll[0], damageRoll[1], damage_bonus );
+			console.log( `====` );
+			console.log( 'Attack Roll' );
+			const attackRoll = rollDice( 1, 20, attack_bonus );
+			if ( 20 === attackRoll.rolls[0] ) {
+				crit = true;
+				console.log( 'CRITICAL HIT' );
+			}
+			console.log( '--' );
+			console.log( 'Damage Roll' );
+			rollDice( damageRoll[0], damageRoll[1], damage_bonus, crit );
+			console.log( `====` );
 			return state;
 
 		default:
@@ -92,13 +99,16 @@ function rollDice( qty = 1, sides = 6, mod = 0, crit = false, verbose = true ) {
 		return a + b;
 	}, 0);
 
-	const results = rolls.join();
-
 	if ( verbose ) {
 		console.log( `Rolled: ${qty}d${sides}+${mod}` );
-		console.log( `Results: ${ rolls.join()} +${mod}` );
+		// console.log( `Results: ${ rolls.join()} +${mod}` );
 		console.log( `Total: ${total}` );
 	}
+
+	return {
+		'total': total,
+		'rolls': rolls,
+	};
 }
 
 export default monsters;
