@@ -5,8 +5,6 @@ const Action = React.createClass({
 
 		const action = this.props.action;
 
-		console.log( this.props );
-
 		return (
 			<div className="monster-action">
 
