@@ -101,7 +101,7 @@ function rollDice( qty = 1, sides = 6, mod = 0, crit = false, verbose = true ) {
 
 	if ( verbose ) {
 		console.log( `Rolled: ${qty}d${sides}+${mod}` );
-		// console.log( `Results: ${ rolls.join()} +${mod}` );
+		//console.log( `Results: ${ rolls.join()} +${mod}` );
 		console.log( `Total: ${total}` );
 	}
 

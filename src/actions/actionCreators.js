@@ -1,4 +1,8 @@
-import monsters from '../data/monsters';
+import srdMonsters from '../data/monsters';
+import customMonsters from '../data/customMonsters';
+
+monsters = srdMonsters.concat( customMonsters );
+
 export function update_filters(filters, key, value) {
 	return {
 		type: 'UPDATE_FILTERS',

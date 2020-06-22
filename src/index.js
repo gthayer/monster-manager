@@ -8,7 +8,10 @@ import reducers from './reducers';
 import routes from './routes';
 
 // Import Monsters
-import monsters from './data/monsters';
+import srdMonsters from './data/monsters';
+import customMonsters from './data/customMonsters';
+
+monsters = srdMonsters.concat( customMonsters );
 
 // Create an object for the default data
 const defaultState = {
