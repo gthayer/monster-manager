@@ -1,5 +1,154 @@
 const customMonsters = [
 	{
+		"name": "Commoner, Hardy",
+		"size": "Medium",
+		"type": "humanoid",
+		"subtype": "any race",
+		"alignment": "any alignment",
+		"armor_class": 12,
+		"hit_points": 39,
+		"hit_dice": "6d8 + 12",
+		"speed": "30 ft.",
+		"strength": 14,
+		"dexterity": 14,
+		"constitution": 12,
+		"intelligence": 10,
+		"wisdom": 12,
+		"charisma": 10,
+		"athletics": 4,
+		"survival": 2,
+		"damage_vulnerabilities": "",
+		"damage_resistances": "",
+		"damage_immunities": "",
+		"condition_immunities": "",
+		"senses": "passive Perception 11",
+		"languages": "any one language (usually Common)",
+		"challenge_rating": .25,
+		"actions": [
+		  {
+			"name": "Improvised Melee Weapon",
+			"desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning, piercing, or slashing damage.",
+			"attack_bonus": 4,
+			"damage_dice": "1d6",
+			"damage_bonus": 2
+		  },
+		  {
+			"name": "Improvised Ranged Weapon",
+			"desc": "Ranged Weapon Attack: +4 to hit, range 20 ft., one target. Hit: 4 (1d4 + 2) bludgeoning, piercing, or slashing damage.",
+			"attack_bonus": 4,
+			"damage_dice": "1d6",
+			"damage_bonus": 2
+		  }
+		]
+	},
+	{
+		"name": "Commoner, Greater",
+		"size": "Medium",
+		"type": "humanoid",
+		"subtype": "any race",
+		"alignment": "any alignment",
+		"armor_class": 12,
+		"hit_points": 39,
+		"hit_dice": "6d8 + 12",
+		"speed": "30 ft.",
+		"strength": 16,
+		"dexterity": 16,
+		"constitution": 14,
+		"intelligence": 10,
+		"wisdom": 12,
+		"charisma": 10,
+		"athletics": 5,
+		"survival": 3,
+		"damage_vulnerabilities": "",
+		"damage_resistances": "",
+		"damage_immunities": "",
+		"condition_immunities": "",
+		"senses": "passive Perception 11",
+		"languages": "any one language (usually Common)",
+		"challenge_rating": .5,
+		"actions": [
+		  {
+			"name": "Multiattack",
+			"desc": "The greater commoner makes two Improvised Weapon attacks (either melee or ranged).",
+			"attack_bonus": 0
+		  },
+		  {
+			"name": "Improvised Melee Weapon",
+			"desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning, piercing, or slashing damage.",
+			"attack_bonus": 5,
+			"damage_dice": "1d6",
+			"damage_bonus": 3
+		  },
+		  {
+			"name": "Improvised Ranged Weapon",
+			"desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning, piercing, or slashing damage.",
+			"attack_bonus": 5,
+			"damage_dice": "1d6",
+			"damage_bonus": 3
+		  }
+		]
+	},
+	{
+		"name": "Bard",
+		"size": "Medium",
+		"type": "humanoid",
+		"subtype": "any",
+		"alignment": "any",
+		"armor_class": 15,
+		"hit_points": 44,
+		"hit_dice": "8d8 + 8",
+		"speed": "30 ft., swim 30 ft.",
+		"strength": 11,
+		"dexterity": 14,
+		"constitution": 12,
+		"intelligence": 10,
+		"wisdom": 13,
+		"charisma": 14,
+		"acrobatics": 4,
+		"perception": 5,
+		"performance": 6,
+		"damage_vulnerabilities": "",
+		"damage_resistances": "",
+		"damage_immunities": "",
+		"condition_immunities": "",
+		"senses": "passive Perception 15",
+		"languages": "any two languages",
+		"challenge_rating": 2,
+		"special_abilities": [
+		  {
+			"name": "Spellcasting",
+			"desc": "The bard is a 4th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It has the following bard spells prepared:\n\nCantrips (at will): friends, mage hand, vicious mockery\n\n1st level (4 slots): charm person, healing word, heroism, sleep, thunderwave\n\n2nd level (3 slots): invisibility, shatter",
+			"attack_bonus": 0
+		  },
+		  {
+			"name": "Song of Rest",
+			"desc": "The bard can perform a song while taking a short rest. Any ally who hears the song regains an extra 1d6 hit points if it spends any Hit Dice to regain hit points at the end of that rest. The bard can confer this benefit on itself as well.",
+			"attack_bonus": 0
+		  },
+		  {
+			"name": "Taunt (2/day)",
+			"desc": "The bard can use a bonus action on its turn to target one creature within 30 feet of it. If the target can hear the bard, the target must succeed on a DC 12 Charisma saving throw or have disadvantage on ability checks, attack rolls, and saving throws until the start of the bard's next turn.",
+			"attack_bonus": 0
+		  },
+		],
+		"actions": [
+		  {
+			"name": "Shortsword",
+			"desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6+2) piercing damage.",
+			"attack_bonus": 4,
+			"damage_dice": "1d6",
+			"damage_bonus": 2
+		  },
+		  {
+			"name": "Shortbow",
+			"desc": "Ranged Weapon Attack: +4 to hit, range 80/320 ft., one: target. Hit: 5 (1d6+2) piercing damage.",
+			"attack_bonus": 4,
+			"damage_dice": "1d6",
+			"damage_bonus": 2
+		  },
+		]
+	},
+	{
 		"name": "Lizardfolk Shaman",
 		"size": "Medium",
 		"type": "humanoid",
