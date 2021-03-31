@@ -44,3 +44,12 @@ export function roll_attack( attack_bonus, damage_dice, damage_bonus ) {
 		damage_bonus
 	}
 }
+
+export function run_simulation( party_a, party_b ) {
+	console.log('run_simulation');
+	return {
+		type: 'RUN_SIMULATION',
+		party_a,
+		party_b
+	}
+}

@@ -1,0 +1,30 @@
+.monster-manager {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.monster-listing {
+	label {
+		display: block;
+	}
+
+	input,
+	textarea {
+		width: 100%;
+		resize: none;
+	}
+
+	textarea {
+		height: 5em;
+	}
+
+	.remove {
+		color: #a94442;
+		cursor: pointer;
+		text-align: right;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

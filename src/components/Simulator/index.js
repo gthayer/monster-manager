@@ -1,0 +1,52 @@
+import React from 'react';
+import Encounterlisting from './Encounterlisting';
+import Helmet from 'react-helmet';
+
+if(process.env.WEBPACK) require('./style.scss');
+
+const Simulator = React.createClass ({
+
+	render() {
+
+		const { encounter } = this.props;
+
+		if ( encounter.length > 0 ) {
+
+			console.log( encounter );
+
+			return (
+			
+			<div className="monster-simulator row">
+				<Helmet
+					title={ 'Monster Manager: Simulator' }
+					meta={[
+						{name: "description", content: 'A Dungeons and Dragons 5e Encounter Manager for GMs.' },
+						{property: 'og:title', content: 'Monster Manager: Simulator'},
+					]} />
+
+					<button href="#" className="btn btn-sm btn-primary" onClick={ e => this.props.run_simulation(encounter, encounter) }>Run Simulation</button>
+
+					{encounter.map((monster, i) => <Encounterlisting {...this.props} key={i} i={i} monster={monster} />)}
+				</div>
+			);
+
+		} else {
+
+			return (
+			
+			<div className="monster-manager row">
+				<Helmet
+					title={ 'Monster Manager: Encounter Admin' }
+					meta={[
+						{name: "description", content: 'A Dungeons and Dragons 5e encounter manager for GMs.' },
+						{property: 'og:title', content: 'Monster Manager: Encounter Admin'},
+					]} />
+
+					<div className="alert alert-danger col-xs-12">Build your encounter to simulate a battle.</div>
+				</div>
+			);
+		}
+	}
+});
+
+export default Simulator;
