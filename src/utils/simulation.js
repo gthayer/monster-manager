@@ -11,7 +11,6 @@ class Simulation {
 			creature.party = 'A';
 			creature.hitpoints_max = creature.hit_points;
 			creature.encounterIndex = creature.party + index;
-			creature.initiative = this.rollInitiative(creature);
 
 			this.party_a.push( creature );
 		});
@@ -20,7 +19,6 @@ class Simulation {
 			creature.party = 'B';
 			creature.hitpoints_max = creature.hit_points;
 			creature.encounterIndex = creature.party + index;
-			creature.initiative = this.rollInitiative(creature);
 
 			this.party_b.push( creature );
 		});
@@ -30,9 +28,15 @@ class Simulation {
 
 	run_encounter() {
 
-		this.sortInitiative();
+		this.party_a.forEach( ( creature, index ) => {
+			creature.initiative = this.rollInitiative(creature);
+		});
 
-		console.log( this.party_b );
+		this.party_b.forEach( ( creature, index ) => {
+			creature.initiative = this.rollInitiative(creature);
+		});
+
+		this.sortInitiative();
 	}
 
 	calculate_ability_mod( ability_score ) {
@@ -67,7 +71,7 @@ class Simulation {
 		return initiative;
 	}
 	
-	rollDice( qty = 1, sides = 6, mod = 0, crit = false, verbose = true ) {
+	rollDice( qty = 1, sides = 6, mod = 0, crit = false, verbose = false ) {
 	
 		let rolls = [];
 	

@@ -14,27 +14,9 @@ function simulation( state = [], action) {
 			keep_fighting = true;
 			const { party_a, party_b } = action;
 
-			let obj = new Simulation(party_a, party_b);
-
-			// // Define the initiative order.
-			// creatures.sort( ( a,b ) => {
-			// 	if (a.initiative < b.initiative) return -1;
-			// 	if (a.initiative > b.initiative) return 1;
-			// 	return 0;
-			// });
-
-			// console.log( creatures );
-			
-			// while ( keep_fighting ) {
-
-			// 	console.log( `Total Creatures: ${creatures.length}` );
-
-			// 	creatures.forEach( (creature) => {
-			// 		attack_creature( creature );
-			// 	});
-
-			// 	keep_fighting = false;
-			// }
+			party_a_Copy = JSON.parse(JSON.stringify(party_a));
+			party_b_Copy = JSON.parse(JSON.stringify(party_b));
+			let obj = new Simulation(party_a_Copy, party_b_Copy);
 
 			return [...state, action.monster];
 

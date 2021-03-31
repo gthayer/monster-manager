@@ -8,10 +8,9 @@ const Simulator = React.createClass ({
 	render() {
 
 		const { encounter } = this.props;
+		encounterCopy = [...encounter];
 
 		if ( encounter.length > 0 ) {
-
-			console.log( encounter );
 
 			return (
 			
@@ -23,7 +22,7 @@ const Simulator = React.createClass ({
 						{property: 'og:title', content: 'Monster Manager: Simulator'},
 					]} />
 
-					<button href="#" className="btn btn-sm btn-primary" onClick={ e => this.props.run_simulation(encounter, encounter) }>Run Simulation</button>
+					<button href="#" className="btn btn-sm btn-primary" onClick={ e => this.props.run_simulation(encounter, encounterCopy) }>Run Simulation</button>
 				</div>
 			);
 
