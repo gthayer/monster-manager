@@ -13,6 +13,7 @@ import Helmet from 'react-helmet';
 
 if(process.env.WEBPACK) require('./style.scss');
 
+// TODO: Re-add Speed.
 const Monster = React.createClass({
 	render() {
 
@@ -26,7 +27,7 @@ const Monster = React.createClass({
 				<Helmet
 					title={ monster.name + ' - Monster Manager Listing' }
 					meta={[
-						{name: "description", content: monster.size + ' ' + monster.type + ' - ' + monster.alignment + '. Armor Class: ' + monster.armor_class + '. Hit Points: ' + monster.hit_points + ' (' + monster.hit_dice + '). Speed: ' + monster.speed + ' ' + monster.actions[0].desc },
+						{name: "description", content: monster.size + ' ' + monster.type + ' - ' + monster.alignment + '. Armor Class: ' + monster.armor_class + '. Hit Points: ' + monster.hit_points + ' (' + monster.hit_dice + '). '+ monster.actions[0].desc },
 						{property: 'og:title', content: monster.name + ' - Monster Manager Listing'},
 					]} />
 

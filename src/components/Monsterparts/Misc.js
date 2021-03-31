@@ -1,5 +1,6 @@
 import React from 'react';
 
+// TODO: Re-add Senses.
 const Misc = React.createClass({
 	render() {
 
@@ -10,7 +11,6 @@ const Misc = React.createClass({
 				
 				<h3 className="section-title">Misc</h3>
 				
-				{ monster.senses 					? <p>Senses: {monster.senses}</p> 									: null }
 				{ monster.languages 				? <p>Languages: {monster.languages}</p> 							: null }
 				{ monster.challenge_rating 			? <p>Challenge: {monster.challenge_rating}</p> 						: null }
 				{ monster.damage_vulnerabilities 	? <p>Damage Vulnerabilities: {monster.damage_vulnerabilities}</p> 	: null }

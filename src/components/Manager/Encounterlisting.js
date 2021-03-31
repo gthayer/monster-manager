@@ -20,10 +20,7 @@ const Listing = React.createClass({
 				
 				<label htmlFor="hit_points">Hit Points:</label>
 				<input name="hit_points" type="text" defaultValue={monster.hit_points} onChange={ e => this.props.update_listing(e.target.name, e.target.value, i ) } />
-				
-				<label htmlFor="speed">Speed:</label>
-				<input name="speed" type="text" defaultValue={monster.speed} onChange={ e => this.props.update_listing(e.target.name, e.target.value, i ) } />
-				
+								
 				<label htmlFor="initiative">Initiative:</label>
 				<input name="initiative" type="text" defaultValue={monster.initiative} onChange={ e => this.props.update_listing(e.target.name, e.target.value, i ) } />
 

@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+// TODO: Re-add Speed
 const General = React.createClass({
 	render() {
 
@@ -12,7 +14,6 @@ const General = React.createClass({
 				<p><span className="sub-title">{monster.size} {monster.type} {monster.subtype} - {monster.alignment}</span></p>
 				<p>Armor Class: {monster.armor_class}</p>
 				<p>Hit Points: {monster.hit_points} ({monster.hit_dice})</p>
-				<p>Speed: {monster.speed}</p>
 				
 			</div>
 		)
